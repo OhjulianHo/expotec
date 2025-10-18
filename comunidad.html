@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfiles de Agricultores | De la Parcela</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4CAF50',
+                        secondary: '#8BC34A',
+                        accent: '#FFC107',
+                        dark: '#388E3C'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .profile-header {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('http://static.photos/agriculture/1200x630/10');
+            background-size: cover;
+            background-position: center;
+        }
+        .rating-star {
+            color: #FFC107;
+        }
+        .crop-image {
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+</style>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 rounded-full bg-emerald-600 flex items-center justify-center text-white font-bold text-xl mr-3">DP</div>
+                <h1 class="text-xl font-semibold text-emerald-600">De la Parcela</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="De la parcela.html" class="text-emerald-600 hover:text-emerald-800 font-medium">Inicio</a>
+                <a href="De la parcela.html" class="text-gray-600 hover:text-emerald-600 font-medium">Nosotros</a>
+                <a href="De la parcela.html" class="text-gray-600 hover:text-emerald-600 font-medium">Beneficios</a>
+                <a href="De la parcela.html" class="text-gray-600 hover:text-emerald-600 font-medium">Productos</a>
+                <a href="De la parcela.html" id="contactar" class="text-gray-600 hover:text-emerald-600 font-medium">Contacto</a>
+            </nav>
+                        <button class="md:hidden text-emerald-600" id="menu-toggle">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            
+            <a href="comunidad.html" class="hidden md:block bg-white-600 hover:bg-white-700 text-white px-6 py-2 rounded-full font-medium btn-primary">
+                Conectar con Agricultores
+            </a>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <i data-feather="menu" class="h-6 w-6"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Farmer Profile Header -->
+    <div class="profile-header text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/4 mb-8 md:mb-0 flex justify-center">
+                    <div class="h-40 w-40 rounded-full border-4 border-white overflow-hidden">
+                        <img src="http://static.photos/people/320x240/5" alt="Juan Pérez" class="h-full w-full object-cover">
+                    </div>
+                </div>
+                <div class="md:w-3/4 md:pl-12 text-center md:text-left">
+                    <h1 class="text-3xl md:text-4xl font-bold mb-2">Josué Calvo Ramírez</h1>
+                    <p class="text-xl mb-4">Productor variado en la zona de San José</p>
+                    <div class="flex flex-wrap items-center justify-center md:justify-start space-x-6 mb-4">
+                        <div class="flex items-center">
+                            <i data-feather="map-pin" class="mr-2"></i>
+                            <span>San José, Costa Rica </span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="calendar" class="mr-2"></i>
+                            <span>15 años de experiencia</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="star" class="mr-2 rating-star"></i>
+                            <span>4.8 (36 reseñas)</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Content -->
+    <div class="container mx-auto px-6 py-12">
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Main Content -->
+            <div class="md:w-2/3">
+                <!-- About Section -->
+                <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Sobre Mí</h2>
+                    <p class="text-gray-700 mb-4">Hola, soy Juan Pérez, agricultor de tercera generación en la región de Michoacán. Me especializo en el cultivo de aguacate Hass de alta calidad, utilizando técnicas sostenibles que he perfeccionado a lo largo de mis 15 años de experiencia.</p>
+                    <p class="text-gray-700">Mi pasión por la agricultura comenzó cuando era niño, ayudando a mi padre en nuestros campos familiares. Hoy, dirijo una operación de 20 hectáreas que no solo provee a mercados locales, sino que también exporta a Estados Unidos y Canadá.</p>
+                </div>
+
+                <!-- Products Section -->
+                <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Mis Productos</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="border rounded-lg overflow-hidden">
+                            <img src="http://static.photos/food/640x360/1" alt="Aguacate Hass" class="w-full crop-image">
+                            <div class="p-4">
+                                <h3 class="font-bold text-lg mb-1">Aguacate Hass</h3>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-primary font-bold">$120/kg</span>
+                                    <span class="text-sm text-gray-600">Disponible: Oct-Mar</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg overflow-hidden">
+                            <img src="http://static.photos/food/640x360/2" alt="Aguacate Orgánico" class="w-full crop-image">
+                            <div class="p-4">
+                                <h3 class="font-bold text-lg mb-1">Aguacate Orgánico</h3>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-primary font-bold">$180/kg</span>
+                                    <span class="text-sm text-gray-600">Disponible: Todo el año</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reviews Section -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Reseñas</h2>
+                    <div class="space-y-6">
+                        <div class="border-b pb-4">
+                            <div class="flex justify-between mb-2">
+                                <h3 class="font-bold">María Sánchez</h3>
+                                <div class="flex">
+                                    <i data-feather="star" class="rating-star"></i>
+                                    <i data-feather="star" class="rating-star"></i>
+                                    <i data-feather="star" class="rating-star"></i>
+                                    <i data-feather="star" class="rating-star"></i>
+                                    <i data-feather="star" class="rating-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-700">"Los aguacates de Juan son los mejores que he probado. Siempre frescos y con un sabor excepcional. He estado comprando de él durante 5 años y nunca me ha decepcionado."</p>
+                        </div>
+                        <div class="border-b pb-4">
+                            <div class="flex justify-between mb-2">
+                                <h3 class="font-bold">Restaurante La Tradición</h3>
+                                <div class="flex">
+                                    <i data-feather="star" class="rating-star"></i>
+                                    <i data-feather="star" class="rating-star"></i>
+                                    <i data-feather="star" class="rating-star"></i>
+                                    <i data-feather="star" class="rating-star"></i>
+                                    <i data-feather="star" class="rating-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-700">"Como restaurante que valora la calidad, hemos encontrado en Juan un proveedor confiable. Su atención al detalle y compromiso con la calidad es excepcional. ¡Altamente recomendado!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="md:w-1/3">
+                <!-- Contact Card -->
+                <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4">Información de Contacto</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i data-feather="phone" class="text-primary mr-3"></i>
+                            <span>+52 443 123 4567</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="mail" class="text-primary mr-3"></i>
+                            <span>juan.perez@agrisocial.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="map-pin" class="text-primary mr-3"></i>
+                            <span>Uruapan, Michoacán, México</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="clock" class="text-primary mr-3"></i>
+                            <span>Lun-Vie: 8am - 5pm</span>
+                        </div>
+                    </div>
+                    <button class="w-full mt-6 bg-primary hover:bg-dark text-white font-bold py-2 px-4 rounded transition duration-300">
+                        <i data-feather="message-circle" class="inline mr-2"></i> Enviar Mensaje
+                    </button>
+                </div>
+
+                <!-- Farm Details -->
+                <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4">Detalles de la Granja</h2>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Tamaño:</span>
+                            <span class="font-medium">20 hectáreas</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Técnicas:</span>
+                            <span class="font-medium">Agricultura sostenible</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Certificaciones:</span>
+                            <span class="font-medium">Orgánico, GlobalGAP</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Mercados:</span>
+                            <span class="font-medium">Local, Nacional, Exportación</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4">Galería</h2>
+                    <div class="grid grid-cols-2 gap-2">
+                        <img src="http://static.photos/agriculture/320x240/11" alt="Granja" class="rounded">
+                        <img src="http://static.photos/agriculture/320x240/12" alt="Cosecha" class="rounded">
+                        <img src="http://static.photos/agriculture/320x240/13" alt="Equipo" class="rounded">
+                        <img src="http://static.photos/agriculture/320x240/14" alt="Empaque" class="rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- More Farmers Section -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Conoce Otros Agricultores</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Farmer 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="http://static.photos/agriculture/640x360/4" alt="Farmer" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Roberto Mendoza</h3>
+                        <p class="text-gray-600 mb-4">Cultivo de maíces criollos</p>
+                        <div class="flex items-center mb-4">
+                            <i data-feather="map-pin" class="text-primary mr-2"></i>
+                            <span class="text-gray-700">Oaxaca, México</span>
+                        </div>
+                        <a href="#" class="block w-full bg-primary hover:bg-dark text-white text-center font-bold py-2 px-4 rounded transition duration-300">
+                            Ver Perfil
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Farmer 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="http://static.photos/agriculture/640x360/5" alt="Farmer" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Luisa Fernández</h3>
+                        <p class="text-gray-600 mb-4">Productora de miel orgánica</p>
+                        <div class="flex items-center mb-4">
+                            <i data-feather="map-pin" class="text-primary mr-2"></i>
+                            <span class="text-gray-700">Yucatán, México</span>
+                        </div>
+                        <a href="#" class="block w-full bg-primary hover:bg-dark text-white text-center font-bold py-2 px-4 rounded transition duration-300">
+                            Ver Perfil
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Farmer 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="http://static.photos/agriculture/640x360/6" alt="Farmer" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">José Ramírez</h3>
+                        <p class="text-gray-600 mb-4">Viñedos y producción de vino</p>
+                        <div class="flex items-center mb-4">
+                            <i data-feather="map-pin" class="text-primary mr-2"></i>
+                            <span class="text-gray-700">Baja California, México</span>
+                        </div>
+                        <a href="#" class="block w-full bg-primary hover:bg-dark text-white text-center font-bold py-2 px-4 rounded transition duration-300">
+                            Ver Perfil
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="bg-emerald-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-emerald-600 font-bold mr-2">DP</div>
+                        <h3 class="text-xl font-semibold">De la Parcela</h3>
+                    </div>
+                    <p class="text-emerald-100">Conectando agricultores y consumidores para un sistema alimentario más justo y sostenible en Costa Rica.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Enlaces rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-emerald-100 hover:text-white">Inicio</a></li>
+                        <li><a href="#nosotros" class="text-emerald-100 hover:text-white">Nosotros</a></li>
+                        <li><a href="#beneficios" class="text-emerald-100 hover:text-white">Beneficios</a></li>
+                        <li><a href="#productos" class="text-emerald-100 hover:text-white">Productos</a></li>
+                        <li><a href="#contacto" class="text-emerald-100 hover:text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-emerald-300"></i>
+                            <span class="text-emerald-100">San José, Costa Rica</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-emerald-300"></i>
+                            <span class="text-emerald-100">+506 2222-2222</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-emerald-300"></i>
+                            <span class="text-emerald-100">info@delaparcela.cr</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Síguenos</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-emerald-700 flex items-center justify-center hover:bg-emerald-600">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-emerald-700 flex items-center justify-center hover:bg-emerald-600">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-emerald-700 flex items-center justify-center hover:bg-emerald-600">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h4 class="text-lg font-semibold mb-2">Boletín informativo</h4>
+                        <div class="flex">
+                            <input type="email" placeholder="Tu correo" class="px-3 py-2 rounded-l-lg w-full text-gray-800">
+                            <button class="bg-emerald-600 hover:bg-emerald-500 px-3 rounded-r-lg">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-emerald-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-emerald-200 text-sm mb-4 md:mb-0">© 2025 De la Parcela. Todos los derechos reservados.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-emerald-200 hover:text-white text-sm">Política de privacidad</a>
+                    <a href="#" class="text-emerald-200 hover:text-white text-sm">Términos de servicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        feather.replace();
+        
+        // Redirect to profiles page when clicking "Enviar solicitud" button
+        document.querySelector('button[type="submit"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'perfiles.html';
+        });
+    </script>
+</body>
+</html>

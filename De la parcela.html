@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De la Parcela | Agricultores directos a tu mesa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/Paisaje\ 1.jfif');
+            background-size: cover;
+            background-position: center;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .benefit-card:hover {
+            transform: scale(1.03);
+        }
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #3ea566;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-[#f9f8f5] text-gray-800">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 rounded-full bg-emerald-600 flex items-center justify-center text-white font-bold text-xl mr-3">DP</div>
+                <h1 class="text-xl font-semibold text-emerald-600">De la Parcela</h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#inicio" class="text-emerald-600 hover:text-emerald-800 font-medium">Inicio</a>
+                <a href="#nosotros" class="text-gray-600 hover:text-emerald-600 font-medium">Nosotros</a>
+                <a href="#beneficios" class="text-gray-600 hover:text-emerald-600 font-medium">Beneficios</a>
+                <a href="#productos" class="text-gray-600 hover:text-emerald-600 font-medium">Productos</a>
+                <a href="#contacto" id="contactar" class="text-gray-600 hover:text-emerald-600 font-medium">Contacto</a>
+            </nav>
+            
+
+            <button class="md:hidden text-emerald-600" id="menu-toggle">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            
+            <a href="comunidad.html" class="hidden md:block bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-full font-medium btn-primary">
+                Conectar con Agricultores
+            </a>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white w-full px-4 py-3 shadow-lg" id="mobile-menu">
+            <a href="#inicio" class="block py-2 text-emerald-600 font-medium">Inicio</a>
+            <a href="#nosotros" class="block py-2 text-gray-600 hover:text-emerald-600">Nosotros</a>
+            <a href="#beneficios" class="block py-2 text-gray-600 hover:text-emerald-600">Beneficios</a>
+            <a href="#productos" class="block py-2 text-gray-600 hover:text-emerald-600">Productos</a>
+            <a href="#contacto" class="block py-2 text-gray-600 hover:text-emerald-600">Contacto</a>
+            <a href="#contacto" class="block bg-emerald-600 text-white text-center py-2 rounded-full mt-2 btn-primary">
+                Conectar con Agricultores
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-image min-h-[80vh] flex items-center justify-center text-white">
+        <div class="container mx-auto px-4 text-center">
+            
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Fresco, directo y justo</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Conectamos a los agricultores costarricenses directamente con los consumidores, eliminando intermediarios para ofrecerte los mejores productos al mejor precio.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#productos" class="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-full font-medium text-lg btn-primary">
+                    Ver productos
+                </a>
+                <a href="#nosotros" class="bg-white hover:bg-gray-100 text-emerald-600 px-8 py-3 rounded-full font-medium text-lg">
+                    Conócenos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-emerald-600 mb-4">Nuestra misión</h2>
+                <div class="w-20 h-1 bg-emerald-400 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="../img/Variación.jpeg" 
+                         alt="Agricultor costarricense" 
+                         class="rounded-lg shadow-lg w-full h-auto object-cover">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Conectando el campo con tu mesa</h3>
+                    <p class="text-gray-600 mb-4">En "De la Parcela" creemos en un sistema alimentario más justo y transparente. Nuestra plataforma elimina los intermediarios que incrementan los precios y reducen las ganancias de los agricultores.</p>
+                    <p class="text-gray-600 mb-6">Trabajamos directamente con pequeños y medianos productores de Costa Rica para ofrecerte productos frescos, de temporada y cultivados con prácticas sostenibles, mientras garantizamos un pago justo a quienes trabajan la tierra.</p>
+                    <div class="flex items-center">
+                        <div class="bg-emerald-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-leaf text-emerald-600 text-xl"></i>
+                        </div>
+                        <p class="text-gray-700 font-medium">Más de 50 agricultores ya forman parte de nuestra red</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="beneficios" class="py-16 bg-[#f5f5f0]">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-emerald-600 mb-4">Beneficios para todos</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Un sistema que beneficia tanto a los productores como a los consumidores, creando una comunidad alimentaria más sostenible.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Benefit 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center benefit-card transition-all duration-300">
+                    <div class="bg-emerald-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-hand-holding-usd text-emerald-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Precios justos</h3>
+                    <p class="text-gray-600">Los agricultores reciben un pago más equitativo y tú obtienes productos de calidad a mejor precio.</p>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center benefit-card transition-all duration-300">
+                    <div class="bg-emerald-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-seedling text-emerald-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Fresco y local</h3>
+                    <p class="text-gray-600">Productos cosechados en su punto óptimo, sin largos tiempos de transporte o almacenamiento.</p>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center benefit-card transition-all duration-300">
+                    <div class="bg-emerald-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-hands-helping text-emerald-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Apoyo directo</h3>
+                    <p class="text-gray-600">Tu compra beneficia directamente al agricultor y su familia, fortaleciendo la economía local.</p>
+                </div>
+                
+                <!-- Benefit 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center benefit-card transition-all duration-300">
+                    <div class="bg-emerald-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-globe-americas text-emerald-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Sostenibilidad</h3>
+                    <p class="text-gray-600">Reducción de la huella de carbono al eliminar largas cadenas de distribución y almacenamiento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="productos" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-emerald-600 mb-4">Productos destacados</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Descubre algunos de los productos frescos que nuestros agricultores tienen para ofrecerte esta semana.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Producto 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md product-card transition-all duration-300 border border-gray-100">
+                    <img src="../img/Piña golden.jpeg" 
+                         alt="Piñas frescas" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">Piña Golden</h3>
+                        <p class="text-gray-600 mb-3">Cultivada en Upala, Alajuela. Dulce y jugosa, cosechada al punto perfecto.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-emerald-600 font-bold text-lg">₡1,200/kg</span>
+                            <button class="bg-emerald-100 text-emerald-600 px-3 py-1 rounded-full text-sm font-medium hover:bg-emerald-200">
+                                Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md product-card transition-all duration-300 border border-gray-100">
+                    <img src="../img/banano de altura.jpg" 
+                         alt="Bananos" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">Banano de altura</h3>
+                        <p class="text-gray-600 mb-3">Producido en Sarapiquí, Heredia. Cultivado sin pesticidas agresivos.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-emerald-600 font-bold text-lg">₡800/kg</span>
+                            <button class="bg-emerald-100 text-emerald-600 px-3 py-1 rounded-full text-sm font-medium hover:bg-emerald-200">
+                                Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md product-card transition-all duration-300 border border-gray-100">
+                    <img src="../img/fresas.jpg" 
+                         alt="Fresas" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">Fresas de Cartago</h3>
+                        <p class="text-gray-600 mb-3">Cultivadas en las faldas del volcán Irazú. Dulces y aromáticas.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-emerald-600 font-bold text-lg">₡2,500/kg</span>
+                            <button class="bg-emerald-100 text-emerald-600 px-3 py-1 rounded-full text-sm font-medium hover:bg-emerald-200">
+                                Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md product-card transition-all duration-300 border border-gray-100">
+                    <img src="../img/aguacate.jpg" 
+                         alt="Aguacates" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">Aguacate Hass</h3>
+                        <p class="text-gray-600 mb-3">De Los Santos, perfecto punto de madurez. Rico en grasas saludables.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-emerald-600 font-bold text-lg">₡1,500/unidad</span>
+                            <button class="bg-emerald-100 text-emerald-600 px-3 py-1 rounded-full text-sm font-medium hover:bg-emerald-200">
+                                Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="#" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-full font-medium btn-primary">
+                    Ver todos los productos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-16 bg-[#f5f5f0]">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-emerald-600 mb-4">Nuestra red de agricultores</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Conectamos con productores en todas las regiones agrícolas de Costa Rica.</p>
+            </div>
+            
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <!-- Placeholder for map - in a real implementation you would use Google Maps or similar -->
+                <div class="bg-gray-200 h-96 rounded-lg flex items-center justify-center">
+                    <div class="text-center">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d125766.73130943098!2d-84.09470188051844!3d9.916431341940127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scr!4v1760808109752!5m2!1ses-419!2scr" width="1473" height="384" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-emerald-500">
+                    <h3 class="font-semibold text-lg mb-2">Zona Norte</h3>
+                    <p class="text-gray-600">17 agricultores registrados</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-emerald-500">
+                    <h3 class="font-semibold text-lg mb-2">Valle Central</h3>
+                    <p class="text-gray-600">13 agricultores registrados</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-emerald-500">
+                    <h3 class="font-semibold text-lg mb-2">Pacífico Central</h3>
+                    <p class="text-gray-600">20 agricultores registrados</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-emerald-600 mb-4">Únete a nuestra comunidad</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">¿Eres agricultor o quieres comprar directamente del productor? Regístrate y forma parte de esta iniciativa.</p>
+                </div>
+                
+                <div class="bg-[#f9f8f5] rounded-lg shadow-md p-6 md:p-8">
+                    <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nombre completo</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Correo electrónico</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Teléfono</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
+                        </div>
+                        
+                        <div>
+                            <label for="role" class="block text-gray-700 font-medium mb-2">Me interesa participar como</label>
+                            <select id="role" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
+                                <option value="">Seleccionar</option>
+                                <option value="farmer">Agricultor/Productor</option>
+                                <option value="consumer">Consumidor</option>
+                                <option value="both">Ambos</option>
+                            </select>
+                        </div>
+                        
+                        <div class="md:col-span-2">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Mensaje adicional</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"></textarea>
+                        </div>
+                        
+                        <div class="md:col-span-2">
+                            <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-full font-medium btn-primary">
+                                Enviar solicitud
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-emerald-600 font-bold mr-2">DP</div>
+                        <h3 class="text-xl font-semibold">De la Parcela</h3>
+                    </div>
+                    <p class="text-emerald-100">Conectando agricultores y consumidores para un sistema alimentario más justo y sostenible en Costa Rica.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Enlaces rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-emerald-100 hover:text-white">Inicio</a></li>
+                        <li><a href="#nosotros" class="text-emerald-100 hover:text-white">Nosotros</a></li>
+                        <li><a href="#beneficios" class="text-emerald-100 hover:text-white">Beneficios</a></li>
+                        <li><a href="#productos" class="text-emerald-100 hover:text-white">Productos</a></li>
+                        <li><a href="#contacto" class="text-emerald-100 hover:text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-emerald-300"></i>
+                            <span class="text-emerald-100">San José, Costa Rica</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-emerald-300"></i>
+                            <span class="text-emerald-100">+506 2222-2222</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-emerald-300"></i>
+                            <span class="text-emerald-100">info@delaparcela.cr</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Síguenos</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-emerald-700 flex items-center justify-center hover:bg-emerald-600">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-emerald-700 flex items-center justify-center hover:bg-emerald-600">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-emerald-700 flex items-center justify-center hover:bg-emerald-600">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h4 class="text-lg font-semibold mb-2">Boletín informativo</h4>
+                        <div class="flex">
+                            <input type="email" placeholder="Tu correo" class="px-3 py-2 rounded-l-lg w-full text-gray-800">
+                            <button class="bg-emerald-600 hover:bg-emerald-500 px-3 rounded-r-lg">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-emerald-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-emerald-200 text-sm mb-4 md:mb-0">© 2025 De la Parcela. Todos los derechos reservados.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-emerald-200 hover:text-white text-sm">Política de privacidad</a>
+                    <a href="#" class="text-emerald-200 hover:text-white text-sm">Términos de servicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
